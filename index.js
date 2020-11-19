@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const util = require('util');
+const util = require('util');
+
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const promptUser = () =>
     inquirer.prompt([{
@@ -10,13 +12,18 @@ const promptUser = () =>
         },
         {
             type: 'input',
-            name: 'Description',
-            message: 'Please provide a project description.',
+            name: 'GitHubName',
+            message: 'What is your GitHub Name?',
         },
         {
             type: 'input',
-            name: 'TableofContents',
-            message: 'What is your favorite hobby?',
+            name: 'email',
+            message: 'What is your email address?',
+        },
+        {
+            type: 'input',
+            name: 'Description',
+            message: 'Please provide a project description.',
         },
         {
             type: 'input',
@@ -25,42 +32,102 @@ const promptUser = () =>
         },
         {
             type: 'input',
-            name: 'Usuage',
+            name: 'Usage',
             message: 'Please enter Usage information.',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'License',
             message: 'Please select all Licenses that apply.',
-            choices: ["Business Certificates",
-                "Health Care Certificates",
-                "Technology Certificates",
-                "Criminal Justice Certificates",
-                "Arts and Design Certificates",
-                "Education Certificates",
-                "Skilled Trade Certificates",
-                "Legal Certificates"
+            choices: ["WordPress",
+                "Rust",
+                "NPM packages",
+                "Apache"
             ]
         },
         {
             type: 'input',
             name: 'Contributing',
-            message: 'Enter your LinkedIn URL.',
+            message: 'Please enter your Contributors.',
         },
         {
             type: 'input',
             name: 'Test',
-            message: 'Enter your LinkedIn URL.',
+            message: 'Please enter you test instructions.',
         },
-        {
-            type: 'input',
-            name: 'Questions',
-            message: 'Enter your LinkedIn URL.',
-        },
+
     ]);
 
 const generateReadme = (answers) =>
-    ` ##README goes here
+    `# ${answers.ProjectTitle}
+
+## Table of Contents
+
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Test](#test)
+* [Questions](#questions)
+
+## Description 
+
+${answers.Description}
+
+## Installation
+
+${answers.Installation}
+
+## Usage 
+
+${answers.Usage}
+
+## Contributing
+
+${answers.Contributing}
+
+## License
+
+${answers.License}
+
+
+## Video
+
+<iframe src="https://drive.google.com/file/d/1bHhB3_H7QURDLlm1Ngj3mvzar4BuCeqv/preview" width="640" height="480"></iframe>
+
+[![alt text](./assets/youtube.png)](https://youtu.be/f7b-rYEUh4c "ReadMe Generator")
+
+## Badges
+
+
+## Contributing
+
+${answers.Contributing}
+
+## Tests
+
+${answers.Test}
+
+## Questions
+
+* GitHub Repo https://github.com/${answers.GitHubName}
+
+You can reach me by emailing me at ${answers.email} with any additional questions.
+
+## Screenshots
+
+* Getting Started
+![Getting Started](./assets/screenshot01.png)
+
+* Answer Questions
+![Answer Questions](./assets/screenshot02.png)
+
+* Preview ReadMe File
+![Preview ReadMe File](./assets/screenshot03.png)
+
+---
+© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 `;
 
 promptUser()
