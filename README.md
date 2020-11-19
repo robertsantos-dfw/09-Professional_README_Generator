@@ -33,7 +33,8 @@ NPM packages
 
 ## Video
 
-<iframe src="https://drive.google.com/file/d/1B8nKPKLDEVKVUAemh_VY43xpuCLdPVV6/preview" width="640" height="480"></iframe>
+
+[![](./assets/youtube.png)](https://youtu.be/f7b-rYEUh4c "ReadMe Generator")
 
 ## Badges
 
@@ -54,8 +55,13 @@ You can reach me by emailing me at robertsantos.dfw@gmail.com with any additiona
 
 ## Screenshots
 
+* Getting Started
 ![Getting Started](./assets/screenshot01.png)
+
+* Answer Questions
 ![Answer Questions](./assets/screenshot02.png)
+
+* Preview ReadMe File
 ![Preview ReadMe File](./assets/screenshot03.png)
 
 ---

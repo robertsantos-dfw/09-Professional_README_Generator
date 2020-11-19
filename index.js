@@ -94,9 +94,7 @@ ${answers.License}
 
 ## Video
 
-<iframe src="https://drive.google.com/file/d/1bHhB3_H7QURDLlm1Ngj3mvzar4BuCeqv/preview" width="640" height="480"></iframe>
-
-[![alt text](./assets/youtube.png)](https://youtu.be/f7b-rYEUh4c "ReadMe Generator")
+[![](./assets/youtube.png)](https://youtu.be/f7b-rYEUh4c "ReadMe Generator")
 
 ## Badges
 
