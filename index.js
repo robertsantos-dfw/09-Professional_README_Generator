@@ -83,10 +83,6 @@ ${answers.Installation}
 
 ${answers.Usage}
 
-## Contributing
-
-${answers.Contributing}
-
 ## License
 
 ${answers.License}

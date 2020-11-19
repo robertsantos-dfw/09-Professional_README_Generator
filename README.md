@@ -22,10 +22,6 @@ This is a node application so, you need to clone the package and open it with yo
 
 This application is simple, clean, easy to use and undertand. After cloning, installing node and opening the package with your code editor, you simply open the file index.js in console, then type node index.js. After that you will be provided with questions related to your project. The first question will be your github username and the last question will be about testing method. Make sure you provide a right github user name as the application will use it to get some information from your github account. After the last question is answered, a README file will be created automaticly in your folder.
 
-## Contributing
-
-Me, Myself, and I
-
 ## License
 
 NPM packages
